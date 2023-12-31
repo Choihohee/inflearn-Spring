@@ -17,7 +17,6 @@ public class MemberRepository {
     }
 
     public Member find(Long id) {    //하나씩 찾는 것
-        return em.find()
+        return em.find(Member.class, id);
     }
-
 }
