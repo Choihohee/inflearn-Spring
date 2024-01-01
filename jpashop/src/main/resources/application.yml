@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/jpashop;MVCC=TRUE
+    url: jdbc:h2:tcp://localhost/~/jpashop;
     username: sa
     password:
     driver-class-name: org.h2.Driver
@@ -12,8 +12,8 @@ spring:
       hibernate:
         # show_sql: true
         format_sql: true
-
+        dialect: org.hibernate.dialect.H2Dialect
 logging.level:
   org.hibernate.SQL: debug
-  #org.hibernate.orm.jdbc.bind: trace
-  # org.hibernate.orm.jdbc.bind: trace #스프링 부트 3.x, hibernate6
+# org.hibernate.type: trace #스프링 부트 2.x, hibernate5
+# org.hibernate.orm.jdbc.bind: trace #스프링 부트 3.x, hibernate6
