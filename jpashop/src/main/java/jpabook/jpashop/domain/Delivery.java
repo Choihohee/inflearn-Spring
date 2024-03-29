@@ -14,4 +14,10 @@ public class Delivery {
     @GeneratedValue
     private Long id;
 
+    private Order order;
+
+    private Address address;
+
+    private DeliveryStatus status;
+
 }
