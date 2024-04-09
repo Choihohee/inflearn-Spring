@@ -1,4 +1,4 @@
-package jpabook.jpashop.domain;
+package jpabook.jpashop;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,20 +6,18 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Getter@Setter
-public abstract class Item {
+public class Delivery {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String name;
+    private Order order;
 
-    private int price;
+    private Address address;
 
-    private List<Category> categories = new ArrayList<>();
+    private DeliveryStatus status;
+
 }
