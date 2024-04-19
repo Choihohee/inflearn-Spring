@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)   //싱글 테이블 전략
 @DiscriminatorColumn(name = "dtype")

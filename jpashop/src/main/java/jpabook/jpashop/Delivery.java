@@ -1,5 +1,6 @@
 package jpabook.jpashop;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -12,6 +13,7 @@ public class Delivery {
 
     @Id
     @GeneratedValue
+    @Column(name = "delivery_id")
     private Long id;
 
     private Order order;
