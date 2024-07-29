@@ -1,7 +1,6 @@
-package jpabook.jpashop;
+package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
-import jpabook.jpashop.domain.Member;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,13 +12,14 @@ import java.util.List;
 @Table(name = "orders")
 @Getter @Setter
 public class Order {
+
     @Id @GeneratedValue
     @Column(name = "order_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
-    private jpabook.jpashop.domain.Member member;  //주문 회원
+    private Member member;  //주문 회원
 
     @OneToMany(mappedBy = "order" , cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();

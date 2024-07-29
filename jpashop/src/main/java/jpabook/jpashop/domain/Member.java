@@ -1,8 +1,6 @@
 package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
-import jpabook.jpashop.Address;
-import jpabook.jpashop.Order;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter@Setter
+@Getter @Setter
 public class Member {
 
     @Id @GeneratedValue
@@ -22,6 +20,6 @@ public class Member {
     @Embedded
     private Address address;
 
-    @OneToMany(mappedBy = "member")//거울 읽기전용
+    @OneToMany(mappedBy = "member") //거울 읽기전용
     private List<Order> orders = new ArrayList<>();
 }

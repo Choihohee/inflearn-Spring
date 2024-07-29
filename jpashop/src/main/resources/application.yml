@@ -15,5 +15,3 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
 logging.level:
   org.hibernate.SQL: debug
-# org.hibernate.type: trace #스프링 부트 2.x, hibernate5
-# org.hibernate.orm.jdbc.bind: trace #스프링 부트 3.x, hibernate6

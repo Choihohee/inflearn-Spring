@@ -2,14 +2,12 @@ package jpabook.jpashop.domain;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import jpabook.jpashop.Item;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @DiscriminatorValue("B")
-@Getter
-@Setter
+@Getter @Setter
 public class Book extends Item {
 
     private String author;
